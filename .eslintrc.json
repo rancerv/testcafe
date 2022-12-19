@@ -3,6 +3,7 @@
         "browser": true,
         "es2021": true
     },
+    "plugins": ["testcafe-community"],
     "extends": "eslint:recommended",
     "overrides": [
     ],
@@ -11,5 +12,24 @@
         "sourceType": "module"
     },
     "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": 0,
+
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "space-in-parens":[
+            "error",
+            "never"
+        ],
+        "testcafe-community/missing-expect": 0
     }
 }

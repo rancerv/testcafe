@@ -2,14 +2,14 @@ import common from "../Utils/commonFunctions.js";
 import Account from "../pageObjectSelectors/accountObjects.js";
 
 const account = new Account();
-const username = 'r.2vm@hotmail.com';
-const password = 'R@ncer19';
+const username = "r.2vm@hotmail.com";
+const password = "R@ncer19";
 const accountText = "My Account";
 const item = "iPhone";
 const logoutText = "You have been logged off your account. It is now safe to leave the computer.";
 
-fixture('POM')
-    .page('http://opencart.abstracta.us/')
+fixture("POM")
+    .page("http://opencart.abstracta.us/")
     .beforeEach(async () => {
         await common.maximize();
         await account.login(username, password);

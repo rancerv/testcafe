@@ -1,10 +1,8 @@
 import { Selector } from "testcafe";
 import common from "../Utils/commonFunctions.js";
 import Header from "./headerObjects.js";
-import Product from "./productsObjects.js";
 
 const header = new Header();
-const product = new Product();
 
  export default class Account {
     constructor(){
@@ -28,15 +26,6 @@ const product = new Product();
     async search(item){
         await common.type(this.searchInput, item);
         await common.clickElement(this.searchButton);
-    }
-
-    async submitOrder(){
-        await common.clickElement(this.logoButton);
-        await common.clickElement(this.featuredProduct);
-        await common.clickElement(product.optionInput);
-        await common.clickElement(product.optionSelection);
-        await common.clickElement(product.cartButton);
-        await common.clickElement(this.shoppingCartButton);
     }
 
     async logout(){

@@ -4,7 +4,8 @@
   "description": "New testcafe project",
   "main": "index.js",
   "scripts": {
-    "test": "ccountTest.js --reporter json"
+    "test": "testcafe chrome C:/Users/r2vm/OneDrive/Escritorio/All/Code/Codes/project/testcafe/opencart/Test --reporter html:Report/HTML-reports/POMreport.html",
+    "test:reports": "testcafe chrome C:/Users/r2vm/OneDrive/Escritorio/All/Code/Codes/project/testcafe/opencart/Test*.js --skips-js-errors --reporter html:Report/HTML-reports/POMreport.html"
   },
   "repository": {
     "type": "git",

@@ -1,19 +1,20 @@
 import { Selector } from "testcafe";
 import common from "../Utils/commonFunctions.js";
-import Header from "./headerObjects.js";
+import header from "./headerObjects.js";
 
-const header = new Header();
 
- export default class Account {
+ class Account {
     constructor(){
         this.myAccountButton = Selector("#top-links ul li.dropdown.open ul li:nth-child(1) a");
         this.myAccountText = Selector("#content h2:nth-child(1)");
+        this.accountCreationH1 = Selector("#content h1");
+        this.accountCreationP = Selector("#content p:nth-child(2)");
+        this.wishListContentP = Selector("#content p");
         this.searchInput = Selector("#search input");
         this.searchButton = Selector("#search span button");
         this.logoButton = Selector("#logo h1 a");
         this.itemText = Selector("#content div:nth-child(8) div div div:nth-child(2) div.caption h4 a");
         this.featuredProduct = Selector("#content div.row div:nth-child(4) div div.image a img");
-        this.shoppingCartButton = Selector("#top-links > ul > li:nth-child(4) a");
         this.logoutButton = Selector("#top-links ul li.dropdown.open ul li:nth-child(5) a");
         this.logoutMessage = Selector("#content p:nth-child(2)");
     }
@@ -21,6 +22,12 @@ const header = new Header();
     async openMyAccount(){
         await common.clickElement(header.accountButton);
         await common.clickElement(this.myAccountButton);
+    }
+
+    async checkingWishList(){
+        await common.clickElement(header.wishList);
+        await common.validateText(this.wishListContentP, "Your shopping cart is empty!");
+
     }
 
     async search(item){
@@ -33,3 +40,5 @@ const header = new Header();
         await common.clickElement(this.logoutButton);
     }
 }
+
+export default new Account();

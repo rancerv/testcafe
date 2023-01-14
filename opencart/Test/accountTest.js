@@ -1,9 +1,7 @@
 import common from "../Utils/commonFunctions.js";
-import Account from "../pageObjectSelectors/accountObjects.js";
-import LoginPage from "../pageObjectSelectors/loginObjects.js";
+import account from "../pageObjectSelectors/accountObjects.js";
+import loginPage from "../pageObjectSelectors/loginObjects.js";
 
-const account = new Account();
-const loginPage = new LoginPage();
 const username = "r.2vm@hotmail.com";
 const password = "R@ncer19";
 const accountText = "My Account";

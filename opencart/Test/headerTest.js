@@ -1,7 +1,8 @@
 import common from "../Utils/commonFunctions.js";
-import Header from "../pageObjectSelectors/headerObjects.js";
+import header from "../pageObjectSelectors/headerObjects.js";
+import account from "../pageObjectSelectors/accountObjects.js";
+import log from "../pageObjectSelectors/loginObjects.js";
 
-const header = new Header();
 const name = "Rancer Ventura";
 const email = "r.2vm@hotmail.com";
 const enquiry = "This is a test";
@@ -10,7 +11,7 @@ const currency = "€ Euro";
 
 const firstName = "Rancer";
 const lastName = "Ventura";
-const registrationEmail = "r.ventura@hotmail.com";
+const registrationEmail = "r.ventura1@hotmail.com";
 const telephone = "8292203030";
 const password = "test01";
 
@@ -32,6 +33,9 @@ test("Contact Us's test", async () => {
     await common.validateText(header.h1ContactUs, contactUsText);
 });
 
-test("Wish List's test", async () => {
-    await header.newCustomerWishList();   
+test.only("Wish List's test", async () => {
+    //const continueRegistration = true
+    //await header.goToWishList();
+    await log.register(firstName, lastName, registrationEmail, telephone, password);
+    await account.checkingWishList();
 });

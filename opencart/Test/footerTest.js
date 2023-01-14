@@ -1,7 +1,6 @@
 import common from "../Utils/commonFunctions.js";
-import Footer from "../pageObjectSelectors/footerObjects.js";
+import footer from "../pageObjectSelectors/footerObjects.js";
 
-const footer = new Footer();
 const aboutText = "Terms & Conditions";
 
 fixture("Footer's Links")

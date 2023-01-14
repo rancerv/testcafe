@@ -1,10 +1,8 @@
 import { Selector } from "testcafe";
 import common from "../Utils/commonFunctions.js";
-import Account from "./accountObjects.js";
+import account from "./accountObjects.js";
 
-const account = new Account();
-
- export default class Products {
+class Products {
     constructor(){
         this.optionInput = Selector("#input-option226");
         this.optionSelection = Selector("#input-option226 option:nth-child(2)");
@@ -20,4 +18,6 @@ const account = new Account();
         await common.clickElement(account.shoppingCartButton);
     }
 
- }
+}
+
+export default new Products();

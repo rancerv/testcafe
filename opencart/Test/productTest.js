@@ -1,11 +1,8 @@
 import common from "../Utils/commonFunctions.js";
-import Cart from "../pageObjectSelectors/cartObjects.js";
-import LoginPage from "../pageObjectSelectors/loginObjects.js";
-import Products from "../pageObjectSelectors/productsObjects.js";
+import cart from "../pageObjectSelectors/cartObjects.js";
+import loginPage from "../pageObjectSelectors/loginObjects.js";
+import products from "../pageObjectSelectors/productsObjects.js";
 
-const product = new Products();
-const cart = new Cart();
-const loginPage = new LoginPage();
 const username = "r.2vm@hotmail.com";
 const password = "R@ncer19";
 

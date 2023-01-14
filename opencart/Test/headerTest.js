@@ -11,7 +11,7 @@ const currency = "€ Euro";
 
 const firstName = "Rancer";
 const lastName = "Ventura";
-const registrationEmail = "r.ventura1@hotmail.com";
+const registrationEmail = "r.ventura2@hotmail.com";
 const telephone = "8292203030";
 const password = "test01";
 
@@ -34,8 +34,8 @@ test("Contact Us's test", async () => {
 });
 
 test.only("Wish List's test", async () => {
-    //const continueRegistration = true
-    //await header.goToWishList();
+    const continueRegistration = true
+    await header.goToWishList();
     await log.register(firstName, lastName, registrationEmail, telephone, password);
     await account.checkingWishList();
 });

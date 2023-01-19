@@ -36,6 +36,6 @@ test("Contact Us's test", async () => {
 test.only("Wish List's test", async () => {
     const continueRegistration = true
     await header.goToWishList();
-    await log.register(firstName, lastName, registrationEmail, telephone, password);
+    await log.register(firstName, lastName, registrationEmail, telephone, password, continueRegistration);
     await account.checkingWishList();
 });

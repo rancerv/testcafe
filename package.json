@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/rancerv/testcafe#readme",
   "devDependencies": {
-    "eslint": "^8.29.0"
+    "eslint": "^8.29.0",
+    "testcafe": "^2.2.0",
+    "testcafe-reporter-xunit": "^2.2.2"
   },
   "dependencies": {
     "testcafe-reporter-html": "^1.4.6"

@@ -11,7 +11,7 @@ const currency = "€ Euro";
 
 const firstName = "Rancer";
 const lastName = "Ventura";
-const registrationEmail = "r.ventura2@hotmail.com";
+const registrationEmail = "r.ventura3@hotmail.com";
 const telephone = "8292203030";
 const password = "test01";
 
@@ -33,7 +33,7 @@ test("Contact Us's test", async () => {
     await common.validateText(header.h1ContactUs, contactUsText);
 });
 
-test.only("Wish List's test", async () => {
+test("Wish List's test", async () => {
     const continueRegistration = true
     await header.goToWishList();
     await log.register(firstName, lastName, registrationEmail, telephone, password, continueRegistration);

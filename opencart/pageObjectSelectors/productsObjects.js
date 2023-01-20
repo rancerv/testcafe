@@ -1,6 +1,7 @@
 import { Selector } from "testcafe";
 import common from "../Utils/commonFunctions.js";
 import account from "./accountObjects.js";
+import header from "./headerObjects.js";
 
 class Products {
     constructor(){
@@ -15,7 +16,7 @@ class Products {
         await common.clickElement(this.optionInput);
         await common.clickElement(this.optionSelection);
         await common.clickElement(this.cartButton);
-        await common.clickElement(account.shoppingCartButton);
+        await common.clickElement(header.shoppingCartButton);
     }
 
 }

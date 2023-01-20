@@ -4,7 +4,7 @@
   "description": "New testcafe project",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome:headless tests/**/* -r xunit:/tmp/test-results/testcafe/results.xml",
+    "test": "testcafe chrome:headless tests/*.js -r xunit:/tmp/test-results/testcafe/results.xml",
     "test:reports": "testcafe chrome C:/Users/r2vm/OneDrive/Escritorio/All/Code/Codes/project/testcafe/opencart/Test --skips-js-errors --reporter html:Report/HTML-reports/POMreport.html"
   },
   "repository": {

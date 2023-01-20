@@ -14,7 +14,7 @@ fixture("Product's Test")
     });
 
     test('Make an Order', async () => {
-        await product.submitOrder();
+        await products.submitOrder();
         //await common.valueMessure(cart.quantityInput);
     });
     

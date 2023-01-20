@@ -16,7 +16,7 @@ class Products {
         await common.clickElement(this.optionInput);
         await common.clickElement(this.optionSelection);
         await common.clickElement(this.cartButton);
-        await common.clickElement(header.shoppingCartButton);
+        await common.clickElement(header.shoppingCart);
     }
 
 }

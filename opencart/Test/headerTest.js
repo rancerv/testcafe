@@ -11,7 +11,7 @@ const currency = "€ Euro";
 
 const firstName = "Rancer";
 const lastName = "Ventura";
-const registrationEmail = "r.ventura4@hotmail.com";
+const registrationEmail = "r.ventura5@hotmail.com";
 const telephone = "8292203030";
 const password = "test01";
 

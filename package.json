@@ -4,7 +4,8 @@
   "description": "New testcafe project",
   "main": "index.js",
   "scripts": {
-    "test": "ccountTest.js --reporter json"
+    "test": "testcafe chrome:headless tests/**/* -r xunit:/tmp/test-results/testcafe/results.xml",
+    "test:reports": "testcafe chrome C:/Users/r2vm/OneDrive/Escritorio/All/Code/Codes/project/testcafe/opencart/Test --skips-js-errors --reporter html:Report/HTML-reports/POMreport.html"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/rancerv/testcafe#readme",
   "devDependencies": {
-    "eslint": "^8.29.0"
+    "eslint": "^8.29.0",
+    "testcafe": "^2.2.0",
+    "testcafe-reporter-xunit": "^2.2.2"
+  },
+  "dependencies": {
+    "testcafe-reporter-html": "^1.4.6"
   }
 }

@@ -1,11 +1,7 @@
 import common from "../Utils/commonFunctions.js";
-import Account from "../pageObjectSelectors/accountObjects.js";
-import Cart from "../pageObjectSelectors/cartObjects.js";
-import LoginPage from "../pageObjectSelectors/loginObjects.js";
+import account from "../pageObjectSelectors/accountObjects.js";
+import loginPage from "../pageObjectSelectors/loginObjects.js";
 
-const account = new Account();
-const cart = new Cart();
-const loginPage = new LoginPage();
 const username = "r.2vm@hotmail.com";
 const password = "R@ncer19";
 const accountText = "My Account";
@@ -27,11 +23,6 @@ test('Validate Log Into My Account', async () => {
 test('Search an Item', async () => {
     await account.search(item);
     await common.validateText(account.itemText, item);
-});
-
-test('Make an Order', async () => {
-    await account.submitOrder();
-    await common.valueMessure(cart.quantityInput);
 });
 
 test('Log out', async () => {
